@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <title>Budgie</title>
+</head>
+<body>
+    <img src="./images/icons8-budgie-96.png" alt="budgie logo">
+    <h2>Hello Megan!</h2>
+    <h3>You have spent $500 this month</h3>
+    <h3>You have $1500 left to spend this month</h3>
+
+    <div id="piechart"></div>
+    <div id="container" style="width: 75%;">
+            <canvas id="canvas"></canvas>
+    </div>
+</body>
+
+<script type="text/javascript">
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Category', 'Amount spent'],
+            ['Housing and Utilities', 700],
+            ['Transportation', 300],
+            ['Insurance', 240],
+            ['Healthcare', 160],
+            ['Education', 100],
+            ['Personal Care', 75],
+            ['Clothing', 100],
+            ['Alcoholic Beverages', 125],
+            ['Not spent', 500]
+        ]);
+
+        var options = { 'title': 'Money spent this month', 'width': 550, 'height': 400 };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+    }
+</script>
+
+<script type="text/javascript">
+    var barChartData = {
+            labels: [
+                "Absence of OB",
+                "Closeness",
+                "Credibility",
+                "Heritage",
+                "M Disclosure",
+                "Provenance",
+                "Reliability",
+                "Transparency"
+            ],
+            datasets: [
+                {
+                    label: "American Express",
+                    backgroundColor: "pink",
+                    borderColor: "red",
+                    borderWidth: 1,
+                    data: [3, 5, 6, 7, 3, 5, 6, 7]
+                },
+                {
+                    label: "Mastercard",
+                    backgroundColor: "lightblue",
+                    borderColor: "blue",
+                    borderWidth: 1,
+                    data: [4, 7, 3, 6, 10, 7, 4, 6]
+                },
+                {
+                    label: "Paypal",
+                    backgroundColor: "lightgreen",
+                    borderColor: "green",
+                    borderWidth: 1,
+                    data: [10, 7, 4, 6, 9, 7, 3, 10]
+                },
+                {
+                    label: "Visa",
+                    backgroundColor: "yellow",
+                    borderColor: "orange",
+                    borderWidth: 1,
+                    data: [6, 9, 7, 3, 10, 7, 4, 6]
+                }
+            ]
+        };
+
+        var chartOptions = {
+            responsive: true,
+            legend: {
+                position: "top"
+            },
+            title: {
+                display: true,
+                text: "Chart.js Bar Chart"
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+
+        window.onload = function () {
+            var ctx = document.getElementById("canvas").getContext("2d");
+            window.myBar = new Chart(ctx, {
+                type: "bar",
+                data: barChartData,
+                options: chartOptions
+            });
+        };
+</script>
+</html>
