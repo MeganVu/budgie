@@ -88,8 +88,16 @@
         </div>
         <div class="col text-center justify-content-center d-flex flex-column">
           <h1 style="color: white">Hello Megan!</h1>
-          <h2 style="color: white">You have spent $500 this month</h2>
-          <h2 style="color: white">You have $1500 left to spend this month</h2>
+          <h2 style="color: white" id="show">You have spent $770 this month</h2>
+          <h2 id="hide2" style="display: none; color: white">
+            You have spent $805 this month
+          </h2>
+          <h2 style="color: white" id="show2">
+            You have $1230 left to spend this month
+          </h2>
+          <h2 id="hide3" style="display: none; color: white">
+            You have $1195 left to spend this month
+          </h2>
         </div>
       </div>
 
@@ -97,7 +105,11 @@
         <div class="container col border-radius: rounded">
           <h3 style="color: white" class="text-center">Money spent:</h3>
           <div id="piechart" class="border-radius: rounded"></div>
-          <div id="piechart2" class="border-radius: rounded"></div>
+          <div
+            id="piechart2"
+            class="border-radius: rounded"
+            style="display: none"
+          ></div>
           <div class="row text-left justify-content-center">
             <h4 style="color: white">
               Click below to earn <span>2</span> eggs!
@@ -167,7 +179,7 @@
                 <td>Housing and Utilities</td>
                 <td>Rent</td>
               </tr>
-              <tr id="hide">
+              <tr id="hide" style="display: none">
                 <td>$35</td>
                 <td>Personal Care</td>
                 <td>Hair Dye</td>
@@ -301,17 +313,29 @@
 
   <script>
     function toggle() {
+      var t = document.getElementById("hide3");
+      var u = document.getElementById("hide2");
+      var v = document.getElementById("show2");
+      var w = document.getElementById("show");
       var x = document.getElementById("hide");
       var y = document.getElementById("piechart");
       var z = document.getElementById("piechart2");
       if (x.style.display === "none") {
+        w.style.display = "none";
+        v.style.display = "none";
         x.style.display = "";
         y.style.display = "none";
         z.style.display = "";
+        t.style.display = "";
+        u.style.display = "";
       } else {
+        w.style.display = "";
+        v.style.display = "";
         x.style.display = "none";
         y.style.display = "";
         z.style.display = "none";
+        t.style.display = "none";
+        u.style.display = "none";
       }
     }
   </script>
