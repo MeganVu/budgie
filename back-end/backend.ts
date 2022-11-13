@@ -81,6 +81,7 @@ export class backend implements intBackend
     {
       this.points = userCollection.points
       this.username = username
+      console.log("Success run")
       return "Login success!"
     } else throw new Error("Incorrect email or password");
   }
@@ -105,10 +106,10 @@ export class backend implements intBackend
 
   }
 
-  public addTransaction(amount:number,category:string,note:string)
+  public addTransaction(amount:number,category:string,note:string,date:string)
   {
     let amountText = amount.toString();
-    let transactionstring = amountText.concat(category,note);
+    let transactionstring = amountText.concat(category,note,date);
     set(ref(database,'users/'),
     {
       budgetTransactions: transactionstring
