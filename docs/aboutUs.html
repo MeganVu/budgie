@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Budgie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/index.css" />
+  </head>
+  <body style="background-color: #fff">
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg bg-light" style="padding: 0px">
+      <div class="container-fluid" style="background-color: #faf8f9">
+        <a href="/docs/index.html" class="navbar-brand"
+          ><img src="/docs/images/logo.jpg" alt=""
+        /></a>
+        <a
+          href="/docs/index.html"
+          class="navbar-brand"
+          style="
+            font-family: 'Rubik', sans serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+          "
+          ><em>BUDGIE</em></a
+        >
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end align-items-right"
+          id="navmenu"
+        >
+          <ul class="navbar-nav ms-auto" style="position: relative; right: 1em">
+            <li class="nav-item mr-3">
+              <a
+                href="/docs/aboutUs.html"
+                class="nav-link"
+                style="color: #141414"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <button
+                class="btn btn-primary btn-msm"
+                data-bs-toggle="modal"
+                data-bs-target="#enroll"
+                style="background-color: #05668d"
+              >
+                <a
+                  href="/docs/LoginPage.html"
+                  style="text-decoration: none; color: white"
+                  >Log In</a
+                >
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="bg-dark">
+      <div class="container vh-75" style="padding-bottom: 116px">
+        <h2
+          class="text-center text-white"
+          style="font-size: 80px; padding: 70px"
+        >
+          Our Team
+        </h2>
+        <div class="row">
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="/docs/images/megan.jpg"
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">Megan Vu</h3>
+                <p class="card-text">Junior Computer Science Student</p>
+                <a
+                  href="https://www.linkedin.com/in/megan-kim-vu/"
+                  style="color: black"
+                  >LinkedIn</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="/docs/images/headshot.jpg"
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">Abigail Thomas</h3>
+                <p class="card-text">Junior Computer Science Student</p>
+                <a
+                  href="https://www.linkedin.com/in/abigailthomas2020/"
+                  style="color: black"
+                  >LinkedIn</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="/docs/images/sergei.jpg"
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">Sergei Wong</h3>
+                <p class="card-text">Junior Computer Engineering Student</p>
+                <a
+                  href="https://www.linkedin.com/in/sergei-wong/"
+                  style="color: black"
+                  >LinkedIn</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="/docs/images/ryan.jpg"
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">Ryan Nguyen</h3>
+                <p class="card-text">Senior Finance Student</p>
+                <a
+                  href="https://www.linkedin.com/in/ryannguyen2023/"
+                  style="color: black"
+                  >LinkedIn</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bottom">
+      <!-- Copyright -->
+      <div
+        class="text-center p-4"
+        style="background-color: #05668d; color: white"
+      >
+        Nothing in the Site constitutes professional and/or financial advice,
+        nor does any information on the Site constitute a comprehensive or
+        complete statement of the matters discussed or the law relating thereto.
+        <a class="text-reset fw-bold" href="/docs/index.html">BUDGIE.com</a>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

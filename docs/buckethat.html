@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Budgie</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/index.css" />
+  </head>
+  <body class="body bg-dark" style="background-color: #fff">
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg bg-light" style="padding: 0px">
+      <div class="container-fluid" style="background-color: #faf8f9">
+        <a href="/docs/dashboard.html" class="navbar-brand"
+          ><img src="/docs/images/logo.jpg" alt=""
+        /></a>
+        <a
+          href="/docs/dashboard.html"
+          class="navbar-brand"
+          style="
+            font-family: 'Rubik', sans serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+          "
+          ><em>BUDGIE</em></a
+        >
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end align-items-right"
+          id="navmenu"
+        >
+          <ul class="navbar-nav ms-auto" style="position: relative; right: 1em">
+            <li class="nav-item mr-3">
+              <a
+                href="/docs/aboutUs.html"
+                class="nav-link"
+                style="color: #141414"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <button
+                class="btn btn-primary btn-msm"
+                data-bs-toggle="modal"
+                data-bs-target="#enroll"
+                style="background-color: #05668d"
+              >
+                <a
+                  href="/docs/dashboard.html"
+                  style="text-decoration: none; color: white"
+                  >Dashboard</a
+                >
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Image of Avatar -->
+    <div class="img_title" style="margin: 0px">
+      <h1
+        style="
+          display: flex;
+          justify-content: center;
+          margin-bottom: 0px;
+          color: #fff;
+          margin-top: 40px;
+        "
+      >
+        Customize your Personal Budgie
+      </h1>
+    </div>
+    <div
+      class="image_container bg-dark"
+      style="display: flex; justify-content: center"
+    >
+      <img
+        src="./images/defaultlogo-buckethat.gif"
+        alt="budgie logo"
+        class="img-fluid"
+        id="main-photo"
+      />
+    </div>
+
+    <!-- Store Components -->
+    <div
+      class="container-fluid bg-light"
+      style="text-align: center; padding-bottom: 130px"
+    >
+      <div class="token_amount" style="display: flex">
+        <h2
+          style="
+            margin-left: 60px;
+            display: flex;
+            justify-content: right;
+            margin-top: 25px;
+          "
+        >
+          Current Eggs:
+        </h2>
+        <img
+          src="/docs/images/Eggs.png"
+          alt=""
+          style="width: 70px; margin-top: 20px"
+        />
+      </div>
+      <div class="hat_item_list">
+        <div class="hat_item_title" style="margin-bottom: 30px">
+          <h1>Accessories:</h1>
+        </div>
+        <div class="hat_item_elements">
+          <ul
+            class="list-group list-group-horizontal"
+            style="justify-content: center"
+          >
+            <li class="list-group-item">
+              <button id="bucket-hat">
+                <a href="buckethat.html"
+                  ><img src="/docs/images/buckethat.gif" alt=""
+                /></a>
+              </button>
+            </li>
+            <li class="list-group-item">
+              <button>
+                <a href="tophat.html"
+                  ><img src="/docs/images/tophat.gif" alt=""
+                /></a>
+              </button>
+            </li>
+            <li class="list-group-item">
+              <button>
+                <a href="sunglasses.html"
+                  ><img src="/docs/images/sunglasses.gif" alt=""
+                /></a>
+              </button>
+            </li>
+            <li class="list-group-item">
+              <button>
+                <a href="redhat.html"
+                  ><img src="/docs/images/redhat.gif" alt=""
+                /></a>
+              </button>
+            </li>
+            <li class="list-group-item">
+              <button>
+                <a href="backpack.html"
+                  ><img src="/docs/images/backpack.gif" alt=""
+                /></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bottom">
+      <!-- Copyright -->
+      <div
+        class="text-center p-4"
+        style="background-color: #05668d; color: white"
+      >
+        Nothing in the Site constitutes professional and/or financial advice,
+        nor does any information on the Site constitute a comprehensive or
+        complete statement of the matters discussed or the law relating thereto.
+        <a class="text-reset fw-bold" href="/docs/index.html">BUDGIE.com</a>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
