@@ -97,6 +97,7 @@
         <div class="container col border-radius: rounded">
           <h3 style="color: white" class="text-center">Money spent:</h3>
           <div id="piechart" class="border-radius: rounded"></div>
+          <div id="piechart2" class="border-radius: rounded"></div>
           <div class="row text-left justify-content-center">
             <h4 style="color: white">
               Click below to earn <span>2</span> eggs!
@@ -157,19 +158,19 @@
                 <th>Notes</th>
               </tr>
               <tr>
-                <td>$7</td>
+                <td>$70</td>
                 <td>Miscellaneous</td>
-                <td>boba :)</td>
+                <td>tickets :)</td>
               </tr>
               <tr>
-                <td>$1200</td>
+                <td>$700</td>
                 <td>Housing and Utilities</td>
                 <td>Rent</td>
               </tr>
-              <tr>
-                <td>$30</td>
+              <tr id="hide">
+                <td>$35</td>
                 <td>Personal Care</td>
-                <td>Meds</td>
+                <td>Hair Dye</td>
               </tr>
             </table>
           </div>
@@ -204,14 +205,23 @@
               name="note"
               class="form-control"
             /><br />
-            <input
-              type="submit"
+            <!-- <input
+              type="button"
               id="submit"
               name="submit"
+              label="Submit"
               class="form-control"
               style="background-color: #05668d; color: white; border: #05668d"
-            />
+              onclick="toggle()"></input>\ -->
           </form>
+          <button
+            id="submit"
+            onclick="toggle()"
+            class="form-control"
+            style="background-color: #05668d; color: white; border: #05668d"
+          >
+            Submit
+          </button>
         </div>
       </div>
     </div>
@@ -238,14 +248,7 @@
       var data = google.visualization.arrayToDataTable([
         ["Category", "Amount spent"],
         ["Housing and Utilities", 700],
-        ["Transportation", 300],
-        ["Insurance", 240],
-        ["Healthcare", 160],
-        ["Education", 100],
-        ["Personal Care", 75],
-        ["Clothing", 100],
-        ["Alcoholic Beverages", 125],
-        ["Not spent", 500],
+        ["Miscellaneous", 70],
       ]);
 
       var options = {
@@ -263,6 +266,53 @@
         document.getElementById("piechart")
       );
       chart.draw(data, options, (scaleFontColor = "white"));
+    }
+  </script>
+
+  <script type="text/javascript">
+    google.charts.load("current", { packages: ["corechart"] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Category", "Amount spent"],
+        ["Housing and Utilities", 700],
+        ["Miscellaneous", 70],
+        ["Personal Care", 35],
+      ]);
+
+      var options = {
+        legend: {
+          textStyle: { color: "white" },
+        },
+        width: 550,
+        height: 400,
+        backgroundColor: "#343a40",
+        scaleFontColor: "white",
+        color: "white",
+      };
+
+      var chart = new google.visualization.PieChart(
+        document.getElementById("piechart2")
+      );
+      chart.draw(data, options, (scaleFontColor = "white"));
+    }
+  </script>
+
+  <script>
+    function toggle() {
+      var x = document.getElementById("hide");
+      var y = document.getElementById("piechart");
+      var z = document.getElementById("piechart2");
+      if (x.style.display === "none") {
+        x.style.display = "";
+        y.style.display = "none";
+        z.style.display = "";
+      } else {
+        x.style.display = "none";
+        y.style.display = "";
+        z.style.display = "none";
+      }
     }
   </script>
 </html>
