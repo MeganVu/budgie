@@ -7,7 +7,7 @@ var env = new backend.backend(3);
 
 server.put(addPoints);
 server.del(removePoints);
-server.post("") //signup + login
+server.post("users/:username/:password",login) //signup + login
 server.get("/points", getPoints);
 
 server.listen(8080,function() {
