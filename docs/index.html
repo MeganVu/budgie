@@ -11,6 +11,12 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body style="background-color: #fff">
     <!-- Navbar Section -->
@@ -19,7 +25,16 @@
         <a href="/docs/index.html" class="navbar-brand"
           ><img src="/docs/images/logo.jpg" alt=""
         /></a>
-        <a href="/docs/index.html" class="navbar-brand">BUDGIE</a>
+        <a
+          href="/docs/index.html"
+          class="navbar-brand"
+          style="
+            font-family: 'Rubik', sans serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+          "
+          ><em>BUDGIE</em></a
+        >
 
         <button
           class="navbar-toggler"
@@ -30,10 +45,18 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navmenu">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a href="/docs/aboutUs.html" class="nav-link">About Us</a>
+        <div
+          class="collapse navbar-collapse justify-content-end align-items-right"
+          id="navmenu"
+        >
+          <ul class="navbar-nav ms-auto" style="position: relative; right: 1em">
+            <li class="nav-item mr-3">
+              <a
+                href="/docs/aboutUs.html"
+                class="nav-link"
+                style="color: #141414"
+                >About Us</a
+              >
             </li>
             <li class="nav-item">
               <button
@@ -89,13 +112,14 @@
     <!-- Footer -->
     <footer class="bottom">
       <!-- Copyright -->
-      <div class="text-center p-4" style="background-color: #05668d">
+      <div
+        class="text-center p-4"
+        style="background-color: #05668d; color: white"
+      >
         Nothing in the Site constitutes professional and/or financial advice,
         nor does any information on the Site constitute a comprehensive or
         complete statement of the matters discussed or the law relating thereto.
-        <a class="text-reset fw-bold" href="https://mdbootstrap.com/"
-          >BUDGIE.com</a
-        >
+        <a class="text-reset fw-bold" href="/docs/index.html">BUDGIE.com</a>
       </div>
     </footer>
     <script
