@@ -27,6 +27,29 @@ export class backend implements intBackend
   private points: number;
   private budgetTransactions: string[];
   private storePurchases: boolean[];
+  private name: string;
+  private monthlyLeft: number;
+  private monthlySpent: number;
+
+  public getName(): string 
+  {
+    return this.name;
+  }
+
+  public getLeft(): number
+  {
+    return this.monthlyLeft;
+  }
+
+  public getSpent(): number
+  {
+    return this.monthlySpent;
+  }
+
+  public getPoints(): number
+  {
+    return this.points;
+  }
 
   public addPoints(): number
   {
@@ -51,19 +74,30 @@ export class backend implements intBackend
     return this.points;
   }
 
-  public getPoints(): number
+  public login(username:string,password:string): string
   {
-    return this.points;
+    let userCollection = {password: "", points: 0};
+    if (password == userCollection.password)
+    {
+      this.points = userCollection.points
+      this.username = username
+      return "Login success!"
+    } else throw new Error("Incorrect email or password");
   }
 
-  public login()
+  public signUp(username:string,password:string): string
   {
+    this.points = 0
+    this.username = username
+    this.password = password
 
-  }
+    set(ref(database,'users/'),
+    {
+      password: this.password,
+      points: this.points
+    })
 
-  public signUp()
-  {
-
+    return "Sign up success!"
   }
 
   public newPurchase()
@@ -71,9 +105,12 @@ export class backend implements intBackend
 
   }
 
-  public addTransaction()
+  public addTransaction(amount:number,category:string,note:string)
   {
-
+    set(ref(database,'users/'),
+    {
+      
+    })
   }
 
   public removeTransaction()
