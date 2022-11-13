@@ -6,7 +6,7 @@ export interface intBackend
     removePoints(): number;
     getPoints(): number;
     newPurchase();
-    addTransaction(amount:number,category:string,note:string);
+    addTransaction(amount:number,category:string,note:string,date:string);
     removeTransaction();
     getName(): string;
     getLeft(): number;
