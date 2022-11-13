@@ -20,12 +20,8 @@
     <!-- Navbar Section -->
     <nav class="navbar navbar-expand-lg bg-light" style="padding: 0px">
       <div class="container-fluid" style="background-color: #faf8f9">
-        <a href="/docs/dashboard.html" class="navbar-brand"
-          ><img src="/docs/images/logo.jpg" alt=""
-        /></a>
-        <a href="/docs/dashboard.html" class="navbar-brand" style="color: black"
-          >BUDGIE</a
-        >
+        <a href="#" class="navbar-brand"><img src="/docs/images/logo.jpg" alt="" /></a>
+        <a href="#" class="navbar-brand" style="color: #141414;" >BUDGIE</a>
 
         <button
           class="navbar-toggler"
@@ -37,16 +33,29 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navmenu">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto" style="position: fixed; right: 1em;">
             <li class="nav-item">
-              <a href="/docs/aboutUs.html" class="nav-link" style="color: black"
-                >Budgie Store</a
+              <a href="/docs/aboutUs.html" class="nav-link" style="color: #141414;">About Us</a>
+            </li>
+            <li class="nav-item">
+              <button
+                class="btn btn-primary btn-msm"
+                data-bs-toggle="modal"
+                data-bs-target="#enroll"
+                style="background-color: #05668d"
               >
+                <a
+                  href="/docs/budgieStore.html"
+                  style="text-decoration: none; color: white"
+                  >Budgie Store</a
+                >
+              </button>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+
 
     <div class="container">
       <div class="row">
@@ -164,7 +173,17 @@
       </div>
     </div>
   </body>
-
+  <footer class="bottom" style="margin-top: 5rem">
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: #05668d">
+      Nothing in the Site constitutes professional and/or financial advice,
+      nor does any information on the Site constitute a comprehensive or
+      complete statement of the matters discussed or the law relating thereto.
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/"
+        >BUDGIE.com</a
+      >
+    </div>
+  </footer>
   <script type="text/javascript">
     google.charts.load("current", { packages: ["corechart"] });
     google.charts.setOnLoadCallback(drawChart);
