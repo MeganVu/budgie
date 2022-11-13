@@ -107,9 +107,11 @@ export class backend implements intBackend
 
   public addTransaction(amount:number,category:string,note:string)
   {
+    let amountText = amount.toString();
+    let transactionstring = amountText.concat(category,note);
     set(ref(database,'users/'),
     {
-      
+      budgetTransactions: transactionstring
     })
   }
 
