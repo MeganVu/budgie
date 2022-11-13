@@ -1,5 +1,6 @@
+import {intBackend} from './intBackend'
 import { initializeApp } from 'firebase/app'
-import { getDatabase, ref } from 'firebase/database'
+import { getDatabase, ref,set } from 'firebase/database'
 
 const firebaseConfig = {
   apiKey: "AIzaSyCFMZQG9qXrWUimvvzj-knHNulX-IKLXh0",
@@ -19,4 +20,65 @@ const app = initializeApp(firebaseConfig)
 
 const database = getDatabase(app)
 
-const port = 8080;
+export class backend implements intBackend 
+{
+  private username: string;
+  private password: string;
+  private points: number;
+  private budgetTransactions: string[];
+  private storePurchases: boolean[];
+
+  public addPoints(): number
+  {
+    this.points += 1;
+    set(ref(database,'users/'),
+      {
+        password: this.password,
+        points: this.points
+      }
+    )
+    return this.points;
+  }
+
+  public removePoints(): number
+  {
+    this.points -= 1;
+    set(ref(database,'users/'),
+    {
+      password: this.password,
+      points: this.points
+    })
+    return this.points;
+  }
+
+  public getPoints(): number
+  {
+    return this.points;
+  }
+
+  public login()
+  {
+
+  }
+
+  public signUp()
+  {
+
+  }
+
+  public newPurchase()
+  {
+
+  }
+
+  public addTransaction()
+  {
+
+  }
+
+  public removeTransaction()
+  {
+
+  }
+
+}
