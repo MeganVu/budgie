@@ -61,14 +61,53 @@
       </div>
 
       <div class="row">
-        <div class="col">
-          <div id="piechart"></div>
+        <div class="container col border-radius: rounded">
+          <h3 style="color: white" class="text-center">Money spent:</h3>
+          <div id="piechart" class="border-radius: rounded"></div>
+                    <div class="row text-left justify-content-center">
+              <h4 style="color: white;">Click below to earn <span>2</span> eggs!</h4>
+              <div class="container row rounded text-center justify-content-center pt-2 pb-4">
+                <div class="col m-4 bg-light p-4 rounded card">
+                    <h5>7 Practical Budgeting Tips to Help Manage Your Money</h5>
+                <img src="./images/article.png" alt="7 Practical Budgeting Tips to Help Manage Your Money " class="img-fluid mb-2">
+                    <button
+              class="btn btn-primary btn-msm"
+              data-bs-toggle="modal"
+              data-bs-target="#enroll"
+              style="background-color: #05668d"
+            >
+              <a
+                href="https://www.nerdwallet.com/article/finance/budgeting-tips"
+                style="text-decoration: none; color: white"
+                >Earn some Eggs!</a
+              >
+            </button>
+            </div>
+                                <div class="col m-4 bg-light p-4 rounded card">
+                    <h5>The Student's Guide to Budgeting in College</h5>
+                <img src="./images/article2.png" alt="7 Practical Budgeting Tips to Help Manage Your Money " class="img-fluid mb-2">
+                <button
+              class="btn btn-primary btn-msm"
+              data-bs-toggle="modal"
+              data-bs-target="#enroll"
+              style="background-color: #05668d"
+            >
+              <a
+                href="https://www.bestcolleges.com/resources/budgeting-in-college/"
+                style="text-decoration: none; color: white"
+                >Earn some Eggs!</a
+              >
+            </button>
+                </div>
+              </div>
+            </div>
         </div>
         <div class="col text-center justfy-content-center d-flex flex-column">
-          <div class="row">
-            <table class="table table-light mb-5">
+          <div class="text-center justfy-content-center">
+            <table class="table table-light mb-5 rounded text-center">
+              <h3 style="color: white" class="text-center">Transactions</h3>
               <tr>
-                <th>Transactions</th>
+                <th>Transaction Amount</th>
                 <th>Category</th>
                 <th>Notes</th>
               </tr>
@@ -89,8 +128,7 @@
               </tr>
             </table>
           </div>
-          <div class="row text-left justify-content-center">
-            <form>
+            <form class="form-group">
               <h4 class="" style="color: white">Add a Transaction</h4>
               <label for="amt" style="color: white">Transaction Amount</label
               ><br />
@@ -108,7 +146,18 @@
                 class="form-control"
               /><br />
               <label for="note" style="color: white">Note</label><br />
-              <input type="text" id="note" name="note" class="form-control" />
+              <input
+                type="text"
+                id="note"
+                name="note"
+                class="form-control"
+              /><br />
+              <input
+                type="submit"
+                id="submit"
+                name="submit"
+                class="form-control"
+              />
             </form>
           </div>
         </div>
@@ -135,15 +184,20 @@
       ]);
 
       var options = {
-        title: "Money spent this month",
+        legend: {
+          textStyle: { color: "white" },
+        },
         width: 550,
         height: 400,
+        backgroundColor: "#343a40",
+        scaleFontColor: "white",
+        color: "white",
       };
 
       var chart = new google.visualization.PieChart(
         document.getElementById("piechart")
       );
-      chart.draw(data, options);
+      chart.draw(data, options, (scaleFontColor = "white"));
     }
   </script>
 </html>
